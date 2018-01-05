@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Resume</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+        
+        .zindex {
+            z-index: 1500;
+            position: none;
+        }
+        
+        .text-name {
+            line-height: 30px
+        }
+        
+        .prgs-size {
+            width: 80%;
+        }
+        
+        .prgs-size2 {
+            width: 95%;
+        }
+        
+        .prgs-size3 {
+            width: 85%;
+        }
+        
+        .prgs-size4 {
+            width: 80%;
+        }
+        
+        .prgs-size5 {
+            width: 70%;
+        }
+    </style>
+    <script src="scripts/jquery-3.2.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body class="container">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <!-- contanier自动测算内外间距 -->
+                <div class="navbar-header">
+                    <div class="navbar-brand">Personal Resume</div>
+                    <!-- 当窗口缩小到一定程度时，会出现菜单按钮 -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#divNav">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+                </div>
+                <!-- 以下定义点击收缩菜单按钮时出现的内容部分开始 -->
+                <div id="divNav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- li内为一个弹出的按钮，定义了一定相关属性 -->
+                        <li>
+                            <button type="button" class="btn btn-success navbar-btn" data-toggle="modal" data-target="#divModal" title="Print">Print</button>
+                            <!-- 通过点击上面的按钮，弹出模态对话框 开始 -->
+                            <div class="modal fade" id="divModal">
+                                <!-- 得到模态对话框 -->
+                                <div class="modal-dialog">
+                                    <!-- 能够支持点击弹出的对话框效果 -->
+                                    <div class="modal-content">
+                                        <div class="modal-header zindex">
+                                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                            <h4 class="modal-title">Print</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Print preview or Print Resume
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Print</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-info navbar-btn" data-toggle="tooltip" data-placement="bottom" title="Download">Download</button>
+                            <script type="text/javascript">
+                                $(function() {
+                                    $('[data-toggle="tooltip"]').tooltip();
+                                });
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 点击收缩菜单按钮时出现的内容部分结束 -->
+        </nav>
+    </header>
+    <div class="row">
+        <!-- 左侧内容开始 -->
+        <div class="col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Personal Info</div>
+
+                <div class="panel-body">
+                    <img src="imgs/error.jpg" class="img-responsive img-rounded img-thumbnail" alt="me">
+                    <div class="text-center text-primary ">Seashell</div>
+                    <address>
+					<strong>Tarena.Inc.</strong>
+					<br>
+					<span class="glyphicon glyphicon-home" title="address">&nbsp;<code>安徽合肥</code></span><br>
+					<span class="glyphicon glyphicon-file" title="PostalCode">&nbsp;<kbd>100011</kbd></span><br>
+					<span class="glyphicon glyphicon-phone" title="Mobile">&nbsp;12365489721</span><br>
+					<span class="glyphicon glyphicon-envelope" title="Email">&nbsp;seashell@qq.com</span><br>
+				</address>
+                </div>
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">Personal Skill</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">HTML5</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active prgs-size"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">.NET</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-success active prgs-size2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">CSS3</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-info active prgs-size3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">JQuery</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-varning active prgs-size4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="text-muted">AP</span>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-danger active prgs-size5"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 技能结束 -->
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">Contact Me</div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="emial" id="email" class="form-control" placeholder="Email" name="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="name" class="form-control" placeholder="Name" name="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary pull-right">Send</button>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 左侧结束 -->
+        <!-- 右侧开始 -->
+        <div class="col-sm-9">
+            <div class="jumbotron">
+                <span class="text-right ">参与制作超过10以上的企业项目,详情请点击<a href="#">网站</a></span><br>
+                <span class="text-right ">参与制作超过10以上的企业项目,详情请点击<a href="#">网站</a></span><br>
+                <span class="text-right ">参与制作超过10以上的企业项目,详情请点击<a href="#">网站</a></span><br>
+
+            </div>
+
+            <div class="panel-group" id="accordion">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">工作经历</a>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-success">
+                                    <div class="row">
+                                        <div class="col-sm-4">2008-至今</div>
+                                        <div class="col-sm-4">XX公司</div>
+                                        <div class="col-sm-4">软件工程师</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-warning">
+                                    <div class="row">
+                                        <div class="col-sm-4">2008-至今</div>
+                                        <div class="col-sm-4">XX公司</div>
+                                        <div class="col-sm-4">软件工程师</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-info">
+                                    <div class="row">
+                                        <div class="col-sm-4">2008-至今</div>
+                                        <div class="col-sm-4">XX公司</div>
+                                        <div class="col-sm-4">软件工程师</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">教育经历</a>
+                        </div>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-success">
+                                    <div class="row">
+                                        <div class="col-sm-4">2008-至今</div>
+                                        <div class="col-sm-4">XX公司</div>
+                                        <div class="col-sm-4">软件工程师</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-warning">
+                                    <div class="row">
+                                        <div class="col-sm-4">2008-至今</div>
+                                        <div class="col-sm-4">XX公司</div>
+                                        <div class="col-sm-4">软件工程师</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-info">
+                                    <div class="row">
+                                        <div class="col-sm-4">2008-至今</div>
+                                        <div class="col-sm-4">XX学校</div>
+                                        <div class="col-sm-4">专业</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion">项目展示</a>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div id="divCarousel" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#divCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#divCarousel" data-slide-to="1"></li>
+                                        <li data-target="#divCarousel" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="imgs/a.jpg" alt="..." class="img-responsive img-rounded">
+                                            <div class="carousel-caption">...</div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="imgs/b.jpg" alt="..." class="img-responsive img-rounded">
+                                            <div class="carousel-caption">...</div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="imgs/c.jpg" alt="..." class="img-responsive img-rounded">
+                                            <div class="carousel-caption">...</div>
+                                        </div>
+                                    </div>
+                                    <a href="#divCarousel" class="left carousel-control" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a href="#divCarousel" class="right carousel-control" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="navbar-default navbar-fixed-bottom text-center">
+            all images and contents
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
